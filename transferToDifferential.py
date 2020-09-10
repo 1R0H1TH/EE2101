@@ -21,3 +21,12 @@ def transfer_to_differential(tf, fun_X = Function('X'), fun_F = Function('F')):
             res = res.replace(exp, newexp)
 
     return res
+
+
+tf1 = 7 / (s**2 + 5*s + 10)
+tf2 = 15 / ((s + 10)*(s + 11))
+tf3 = (s + 3) / (s**3 + 11*s**2 + 12*s + 18)
+
+pprint(transfer_to_differential(tf1))
+pprint(transfer_to_differential(tf2))
+pprint(transfer_to_differential(tf3))
